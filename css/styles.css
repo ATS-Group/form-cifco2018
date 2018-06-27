@@ -108,6 +108,15 @@ input{
             display: flex;
             flex-flow: row wrap;
         }
+            .gob {
+                display: flex;
+                flex-flow: row nowrap;
+            }
+            img.img{
+                flex-grow: 0;
+                height: 54px;
+                margin: 25px 0 25px 25px
+            }
 
 
     .second-half {
