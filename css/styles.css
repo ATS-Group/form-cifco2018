@@ -15,8 +15,7 @@ body{
     font-size: 1em;
     text-transform: uppercase;
 }
-input{
-}
+
 .input[type=text], .input[type=email] {
     border: none;
     border-bottom: 1px solid #a5a5a5;
@@ -102,6 +101,7 @@ input{
         }
             h2 span {
                 font-size: 2em;
+                text-transform: uppercase;
                 margin-left: 5em;
             }
         .logos {
@@ -112,10 +112,20 @@ input{
                 display: flex;
                 flex-flow: row nowrap;
             }
-            img.img{
-                flex-grow: 0;
-                height: 54px;
-                margin: 25px 0 25px 25px
+                img.img{
+                    flex-grow: 0;
+                    height: 54px;
+                    margin: 25px 0 25px 25px
+                }
+            .social{
+                align-self: flex-end;
+                margin-left: 150px;
+                margin-bottom: 50px;
+            }
+            .fab {
+                color: #fff;
+                font-size: 2em;
+                margin: 5px;
             }
 
 
@@ -181,13 +191,45 @@ input{
         align-self: center;
     }
     .first-half {
+        flex-flow: column nowrap;
         background-position: center;
-        height: 15em;
+        height: 20em;
     }
     h2 span {
         display: none;
     }
-}
-@media all and (max-width: 1200px){
+    .title{
+        flex: 2 1 auto;
+        align-self: center;
+        margin: 0px;
+    }
 
+    .logos {
+        flex: 1 1 100%;
+        align-items: flex-end;
+        align-content: space-between;
+
+    }
+    .gob {
+        flex: 1 1 auto;
+        margin: 10px;
+        align-self: auto;
+    }
+    .social {
+        flex: 1 1 auto;
+        margin: 10px;
+        align-self: auto;
+        text-align: right;
+    }
+    img.img {
+        height: 30px;
+        margin-bottom: 0;
+    }
+    
+}
+
+@media all and (max-width:400px){
+    .logos{
+        display: none;
+    }
 }
