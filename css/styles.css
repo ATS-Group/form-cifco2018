@@ -74,7 +74,11 @@ body{
     display: flex;
     flex-flow: row nowrap;
     margin: 0;
-
+    height: 100%;
+}
+div.container{
+    min-width: 100%;
+    min-height: 100%;
 }
     .first-half {
         background: url(../img/bg-left.jpg) no-repeat fixed center;
@@ -131,7 +135,7 @@ body{
 
     .second-half {
         flex: 3 1 auto;
-        padding: 5em 7em;
+        padding: 7em 7em;
         width: 40%;
     }
         .form{
