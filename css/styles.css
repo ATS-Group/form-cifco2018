@@ -11,200 +11,13 @@ body{
 }
 
 
-.label {
-    color: #a5a5a5;
-    font-size: 1em;
-    text-transform: uppercase;
-}
-
-.input[type=text], .input[type=email] {
-    border: none;
-    border-bottom: 1px solid #a5a5a5;
-    outline: none;
-    color: #3a3a3a;
-    font-size: 16px;
-}
-/*Estilos select*/
-
-.sel {
-    display: inline-block;
-    background-color: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.sel::before {
-    position: absolute;
-    content: '\f078';
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 1.5em;
-    color: #a5a5a5; 
-    right: 20px;
-    top: calc(50% - 0.5em);
-}
-
-.sel.active::before {
-    transform: rotate(-180deg);
-}
-
-.sel__placeholder {
-    display: block;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    color: #3a3a3a;
-    text-align: left;
-    pointer-events: none;
-    user-select: none;
-    visibility: visible;
-}
-
-.sel.active .sel__placeholder{
-    visibility: hidden;
-}
-.sel__placeholder::before{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: attr(data-placeholder);
-    visibility: hidden;
-}
-
-.sel.active .sel__placeholder::before{
-    visibility: visible;
-}
-
-.sel__box{
-    position: absolute;
-    top: calc(100% + 4px);
-    left: -4px;
-    display: none;
-    list-style-type: none;
-    text-align: left;
-    font-size: 15px;
-    background-color: #fff;
-    width: calc(100% + 8px);
-    box-sizing: border-box;
-}
-.sel.active .sel__box {
-    display: block;
-    animation: fadeInUp 500ms;
-}
-
-.sel__box__option {
-    display: list-item;
-    font-size: 15px;
-    color: #a5a5a5;
-    padding: 0.5em 1em;
-    user-select: none;
-}
-
-.sel__box__option::after{
-    content: '\f00c';
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 13px;
-    margin-left: 5px;
-    display: none;
-}
-
-.sel__box__option.selected::after {
-    display: inline;
-}
-
-.sel__box__option:hover {
-    background-color: rgba(207, 0, 90, .3);
-}
-
-.sel {
-    border-bottom: 1px solid #a5a5a5;
-}
-
-.sel.select1 {
-    padding: 5px;
-    margin: 10px;
-}
-
-.select1{
-    z-index: 3;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 20px, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-/*Fin selects */
-
-.input[type=submit]{
-    border: none;
-    width: 45%;
-    color: #fff;
-    background: #5f096c;
-    background: -moz-linear-gradient(left, #5f096c 0%, #cf005a 100%);
-    background: -webkit-linear-gradient(left, #5f096c 0%,#cf005a 100%);
-    background: linear-gradient(to right, #5f096c 0%,#cf005a 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f096c', endColorstr='#cf005a',GradientType=1 );
-    cursor: pointer;
-    border-radius: 200px 200px 200px 200px;
-    -moz-border-radius: 200px 200px 200px 200px;
-    -webkit-border-radius: 200px 200px 200px 200px;
-    padding: 10px;
-    margin-top:20px; 
-}
-
-.input[type=file]{
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-
-.file-c + .file-r {
-    font-size: 0.9em;
-    color: #fff;
-    background-color: #cf005a;
-    border-radius: 200px 200px 200px 200px;
-    -moz-border-radius: 200px 200px 200px 200px;
-    -webkit-border-radius: 200px 200px 200px 200px;
-    width: 40%;
-    text-align: center;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.label, .input, .select{
-    margin: 10px;
-    padding: 5px;
-    font-family: 'Poppins', sans-serif;
-}
-
-/*flexbox*/
+/*flexbox Estilos*/
 .container {
     display: flex;
     flex-flow: row nowrap;
     margin: 0;
     height: 100%;
+    width: 100%;
 }
 
     .first-half {
@@ -299,26 +112,229 @@ body{
                    position: relative;
                 }
 
+/*FIN ESTILOS FLEXBOX*/
 
 
-@media all and (max-width: 600px){
-    div.second-half{
-        width: 95%;
+/*Estilos select*/
+
+.sel {
+    display: inline-block;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.sel::before {
+    position: absolute;
+    content: '\f078';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.5em;
+    color: #a5a5a5; 
+    right: 20px;
+    top: calc(50% - 0.5em);
+}
+
+.sel.active::before {
+    transform: rotate(-180deg);
+}
+
+.sel__placeholder {
+    display: block;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #3a3a3a;
+    text-align: left;
+    pointer-events: none;
+    user-select: none;
+    visibility: visible;
+}
+
+.sel.active .sel__placeholder{
+    visibility: hidden;
+}
+.sel__placeholder::before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: attr(data-placeholder);
+    visibility: hidden;
+}
+
+.sel.active .sel__placeholder::before{
+    visibility: visible;
+}
+
+.sel__box{
+    position: absolute;
+    top: calc(100% + 4px);
+    left: -4px;
+    display: none;
+    list-style-type: none;
+    text-align: left;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    width: calc(100% + 8px);
+    box-sizing: border-box;
+}
+.sel.active .sel__box {
+    display: block;
+    animation: fadeInUp 500ms;
+}
+
+.sel__box__option {
+    display: list-item;
+    font-size: 15px;
+    color: #a5a5a5;
+    padding: 0.5em 1em;
+    user-select: none;
+}
+
+.sel__box__option::after{
+    content: '\f00c';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 13px;
+    margin-left: 5px;
+    display: none;
+}
+
+.sel__box__option.selected::after {
+    display: inline;
+}
+
+.sel__box__option:hover {
+    background-color: rgba(207, 0, 90, .3);
+}
+
+.sel {
+    border-bottom: 1px solid #a5a5a5;
+}
+
+.sel.select1 {
+    padding: 5px;
+    margin: 10px;
+}
+
+.select1{
+    z-index: 3;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
     }
-    .sel::before {
-        right: 0px;
-    }
-    .sel__placeholder {
-        display: block;
-        font-size: 13px;
+
+    to {
+        opacity: 1;
+        transform: none;
     }
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/*Fin selects */
+
+
+/*INPUT estilos*/
+
+.input[type=text], .input[type=email] {
+    border: none;
+    border-bottom: 1px solid #a5a5a5;
+    outline: none;
+    color: #3a3a3a;
+    font-size: 16px;
+}
+
+.input[type=submit]{
+    border: none;
+    width: 45%;
+    color: #fff;
+    background: #5f096c;
+    background: -moz-linear-gradient(left, #5f096c 0%, #cf005a 100%);
+    background: -webkit-linear-gradient(left, #5f096c 0%,#cf005a 100%);
+    background: linear-gradient(to right, #5f096c 0%,#cf005a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f096c', endColorstr='#cf005a',GradientType=1 );
+    cursor: pointer;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    padding: 10px;
+    margin-top:20px; 
+}
+
+.input[type=file]{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-c + .file-r {
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #cf005a;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    width: 40%;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.label {
+    color: #a5a5a5;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.label, .input{
+    margin: 10px;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/**Media querys*/
 @media all and (max-width: 300px){
     h1 {
         font-size: 1.5em;
     }
 }
+
+@media all and (max-width:400px){
+    .logos{
+        display: none;
+    }
+ 
+}
+
+@media all and (max-width: 600px){
+    div.second-half{
+        width: 95%;
+    }
+    .sel__placeholder {
+        display: block;
+        font-size: 12px;
+    }
+    .input[type=text], .input[type=email] {
+        font-size: 12px;
+    }
+}
+
 @media all and (max-width: 1000px){
     .container {
         flex-flow: column nowrap;
@@ -363,12 +379,10 @@ body{
         height: 30px;
         margin-bottom: 0;
     }
+        .sel::before {
+        right: 0px;
+    }
     
 }
 
-@media all and (max-width:400px){
-    .logos{
-        display: none;
-    }
- 
-}
+/**Media querys*/
