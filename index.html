@@ -51,15 +51,18 @@
                     <div class="box2">
                       <div class="sub-box1">
                           <label for="documento" class="label">Documento</label>
-                          <select class="select"name="Documento" id="">
-                            <option value="dui" class="opcion">DUI</option>
-                            <option value="nit" class="opcion">NIT</option>
-                            <option value="pasaporte" class="opcion">Pasaporte</option>
-                            <option value="licencia" class="opcion">Licencia</option>
-                          </select>
+                          <div class="sel select1">
+                            <select class="select" name="Documento" id="select">
+                              <option value="default" class="opcion" disabled>Seleccionar</option>
+                              <option value="dui" class="opcion">DUI</option>
+                              <option value="nit" class="opcion">NIT</option>
+                              <option value="pasaporte" class="opcion">Pasaporte</option>
+                              <option value="licencia" class="opcion">Licencia</option>
+                            </select>            
+                          </div>
                       </div>
                       <div class="sub-box1">
-                          <label for="numero-documento" class="label">Numero de Documento</label>
+                          <label for="numero-documento" class="label">Número de Documento</label>
                           <input type="text" name="numero-documento" class="input">
                       </div>
 
@@ -83,11 +86,14 @@
                       </div>
                       <div class="sub-box1">
                         <label for="pais" class="label">País</label>
-                        <select name="pais" id="" class="select">
-                            <option value="el-salvador" class="opcion">El Salvador</option>
-                            <option value="guatemala" class="opcion">Guatemala</option>
-                            <option value="nicaragua" class="opcion">Nicaragua</option>
+                        <div class="sel select1">
+                          <select name="pais" id="" class="select" id="select">
+                              <option value="default" class="opcion" disabled>Seleccionar</option>
+                              <option value="el-salvador" class="opcion">El Salvador</option>
+                              <option value="guatemala" class="opcion">Guatemala</option>
+                              <option value="nicaragua" class="opcion">Nicaragua</option>
                           </select>
+                        </div>
                       </div>
 
                     </div><!--box2-->
@@ -95,29 +101,35 @@
                     <div class="box2">
                       <div class="sub-box1">
                         <label for="categoria" class="label">Categoria</label>
-                        <select name="categoria" id="" class="select">
-                          <option value="staff" class="opcion">Expositor</option>
-                          <option value="proveedor" class="opcion">Proveedor</option>
-                          <option value="staff" class="opcion">Staff</option>
-                        </select>
+                        <div class="sel select1">
+                          <select name="categoria" id="" class="select">
+                              <option value="default" class="opcion" disabled>Seleccionar</option>
+                            <option value="staff" class="opcion">Expositor</option>
+                            <option value="proveedor" class="opcion">Proveedor</option>
+                            <option value="staff" class="opcion">Staff</option>
+                          </select>
+                        </div>
                       </div> <!--box2-->
 
                       <div class="sub-box1">
                         <label for="tipo-acceso" class="label">Tipo de acceso</label>
-                        <select name="tipo-acceso" id="" class="select">
-                          <option value="total" class="opcion">Total</option>
-                          <option value="administrativo" class="opcion">Administrativo</option>
-                          <option value="operativo" class="opcion">Operativo</option>
-                          <option value="apoyo" class="opcion">Apoyo</option>
-                        </select>
+                        <div class="sel select1">
+                          <select name="tipo-acceso" id="" class="select">
+                              <option value="default" class="opcion" disabled>Seleccionar</option>
+                            <option value="total" class="opcion">Total</option>
+                            <option value="administrativo" class="opcion">Administrativo</option>
+                            <option value="operativo" class="opcion">Operativo</option>
+                            <option value="apoyo" class="opcion">Apoyo</option>
+                          </select>
+                        </div>
                       </div>
                     </div><!--.box5-->
           
                     <div class="box6">
                       <div class="sub-box2"></div>
                         <label for="foto" class="label">Subir foto</label>
-                        <input type="file" name="subir-foto" class="input file-c" id="file" data-multiple-caption="{count} files selected" multiple>
-                        <label for="file" class="label file-r">Selecciona un archivo</label>
+                        <input type="file" name="subir-foto" class="input file-c" id="file"/>
+                        <label for="file" class="label file-r"><span>Selecciona un archivo</span></label>
                       </div>
                       <div class="sub-box2">
                         <input type="submit" value="ENVIAR"class="input">
@@ -132,6 +144,8 @@
           
             </div> <!--.container-->
 
-  <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
