@@ -311,6 +311,10 @@ div.container{
     .sel::before {
         right: 0px;
     }
+    .sel__placeholder {
+        display: block;
+        font-size: 13px;
+    }
 }
 
 @media all and (max-width: 300px){
@@ -369,4 +373,5 @@ div.container{
     .logos{
         display: none;
     }
+ 
 }
