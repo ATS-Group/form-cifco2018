@@ -308,6 +308,9 @@ div.container{
     div.second-half{
         width: 90%;
     }
+    .sel::before {
+        right: 0px;
+    }
 }
 
 @media all and (max-width: 300px){
