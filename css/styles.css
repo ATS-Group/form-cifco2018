@@ -122,7 +122,7 @@ body{
 }
 
 .sel.select1 {
-    padding: 2px;
+    padding: 5px;
     margin: 10px;
 }
 
@@ -206,10 +206,7 @@ body{
     margin: 0;
     height: 100%;
 }
-div.container{
-    min-width: 100%;
-    min-height: 100%;
-}
+
     .first-half {
         background: url(../img/bg-left.jpg) no-repeat fixed center;
         background-size: cover;
@@ -306,7 +303,7 @@ div.container{
 
 @media all and (max-width: 600px){
     div.second-half{
-        width: 90%;
+        width: 95%;
     }
     .sel::before {
         right: 0px;
