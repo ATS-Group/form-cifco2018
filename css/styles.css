@@ -8,6 +8,7 @@ body{
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 12px;
+    background-color: #fbfbfc;
 }
 
 
@@ -175,7 +176,7 @@ body{
     list-style-type: none;
     text-align: left;
     font-size: 15px;
-    background-color: rgb(255, 255, 255);
+    background-color:#f4f5f7;
     width: calc(100% + 8px);
     box-sizing: border-box;
 }
@@ -213,13 +214,21 @@ body{
     border-bottom: 1px solid #a5a5a5;
 }
 
-.sel.select1 {
+.sel {
     padding: 5px;
     margin: 10px;
 }
 
 .select1{
     z-index: 3;
+}
+
+.select2{
+    z-index: 2;
+}
+
+.select3 {
+    z-index: 1;
 }
 
 @keyframes fadeInUp {
@@ -255,6 +264,7 @@ body{
     outline: none;
     color: #3a3a3a;
     font-size: 16px;
+    background-color: transparent;
 }
 
 .input[type=submit]{
