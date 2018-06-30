@@ -64,4 +64,17 @@ $('.sel__box__option').click(function(){
 	var $currentSel = $(this).closest('.sel');
 	$currentSel.children('.sel__placeholder').text(txt);
 	$currentSel.children('select').prop('selectedIndex', index + 1);
+
 });
+
+
+$('.form').bind('submit', function(){
+	var selectPais = document.querySelector( '.select.pais' );
+
+	var opcionSeleccionada = this.options[selectPais.selectedIndex];
+
+	console.log(opcionSeleccionada);
+
+	return false;
+});
+

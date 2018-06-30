@@ -19,6 +19,7 @@ body{
     margin: 0;
     height: 100%;
     width: 100%;
+    overflow-y: hidden;
 }
 
     .first-half {
@@ -258,7 +259,7 @@ body{
 
 /*INPUT estilos*/
 
-.input[type=text], .input[type=email] {
+.input[type=text], .input[type=email], .input[type=tel] {
     border: none;
     border-bottom: 1px solid #a5a5a5;
     outline: none;
