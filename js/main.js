@@ -1,80 +1,80 @@
-/** Hacks para que el input file funcione */
+/***Javascript puro */
 
-var inputs = document.querySelectorAll( '.file-c' );
-Array.prototype.forEach.call( inputs, function( input )
-{
-	var label	 = input.nextElementSibling,
-		labelVal = label.innerHTML;
+(function() {
+    "use strict";
 
-	input.addEventListener( 'change', function( e )
-	{
-		var fileName = '';
+})(); //Dom content loaded
 
-			fileName = e.target.value.split( '\\' ).pop();
+document.addEventListener('DOMContentLoaded', function(event) {
 
-		if( fileName ){
-			label.querySelector( 'span' ).innerHTML = fileName;
-		}else{
-			label.innerHTML = labelVal;
-		}
-	});
+    /** Hacks para que el input file funcione */
+
+    var inputs = document.querySelectorAll('.file-c');
+    Array.prototype.forEach.call(inputs, function(input) {
+        var label = input.nextElementSibling,
+            labelVal = label.innerHTML;
+
+        input.addEventListener('change', function(e) {
+            var fileName = '';
+
+            fileName = e.target.value.split('\\').pop();
+
+            if (fileName) {
+                label.querySelector('span').innerHTML = fileName;
+            } else {
+                label.innerHTML = labelVal;
+            }
+        });
+    });
 });
+
+/**Jquery */
 
 /**Que los estilos del select funcionen */
+$(function() {
+    $('.sel').each(function() {
+        $(this).children('select').css('display', 'none');
 
-$('.sel').each(function() {
-	$(this).children('select').css('display', 'none');
+        var $current = $(this);
 
-	var $current = $(this);
+        $(this).find('option').each(function(i) {
+            if (i == 0) {
+                $current.prepend($('<div>', {
+                    class: $current.attr('class').replace(/sel/g, 'sel__box')
+                }));
 
-	$(this).find('option').each(function(i) {
-		if(i == 0){
-			$current.prepend($('<div>', {
-				class: $current.attr('class').replace(/sel/g, 'sel__box')
-			}));
+                var placeholder = $(this).text();
+                $current.prepend($('<span>', {
+                    class: $current.attr('class').replace(/sel/g, 'sel__placeholder'),
+                    text: placeholder,
+                    'data-placeholder': placeholder
+                }));
 
-			var placeholder = $(this).text();
-			$current.prepend($('<span>', {
-				class: $current.attr('class').replace(/sel/g, 'sel__placeholder'),
-				text: placeholder,
-				'data-placeholder': placeholder
-			}));
+                return;
+            }
 
-			return;
-		}
+            $current.children('div').append($('<span>', {
+                class: $current.attr('class').replace(/sel/g, 'sel__box__option'),
+                text: $(this).text()
+            }));
+        });
+    });
 
-		$current.children('div').append($('<span>', {
-			class: $current.attr('class').replace(/sel/g, 'sel__box__option'),
-			text: $(this).text()
-		}));
-	});
+    $('.sel').click(function() {
+        $(this).toggleClass('active');
+    });
+
+    $('.sel__box__option').click(function() {
+        var txt = $(this).text();
+        var index = $(this).index();
+
+        $(this).siblings('.sel__box__option').removeClass('selected');
+        $(this).addClass('selected');
+
+        var $currentSel = $(this).closest('.sel');
+        $currentSel.children('.sel__placeholder').text(txt);
+        $currentSel.children('select').prop('selectedIndex', index + 1);
+
+    });
+
 });
-
-$('.sel').click(function(){
-	$(this).toggleClass('active');
-});
-
-$('.sel__box__option').click(function(){
-	var txt = $(this).text();
-	var index = $(this).index();
-
-	$(this).siblings('.sel__box__option').removeClass('selected');
-	$(this).addClass('selected');
-
-	var $currentSel = $(this).closest('.sel');
-	$currentSel.children('.sel__placeholder').text(txt);
-	$currentSel.children('select').prop('selectedIndex', index + 1);
-
-});
-
-
-$('.form').bind('submit', function(){
-	var selectPais = document.querySelector( '.select.pais' );
-
-	var opcionSeleccionada = this.options[selectPais.selectedIndex];
-
-	console.log(opcionSeleccionada);
-
-	return false;
-});
-

@@ -1,10 +1,10 @@
-* {    
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 12px;
@@ -13,6 +13,7 @@ body{
 
 
 /*flexbox Estilos*/
+
 .container {
     display: flex;
     flex-flow: row nowrap;
@@ -22,98 +23,111 @@ body{
     overflow-y: hidden;
 }
 
-    .first-half {
-        background: url(../img/bg-left.jpg) no-repeat fixed center;
-        background-size: cover;
-        background-position: -20em;
-        flex: 1 0 auto;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        color: #fff;
-    }
-        .title {
-            align-self: center;
-        }
-            h1 {
-                font-family: 'Montserrat Alternates', sans-serif;
-                padding: 3em;
-            }
-        .text-midle h2{
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-content: center;
-        }
-            h2 span {
-                font-size: 2em;
-                text-transform: uppercase;
-                margin-left: 5em;
-            }
-        .logos {
-            display: flex;
-            flex-flow: row wrap;
-        }
-            .gob {
-                display: flex;
-                flex-flow: row nowrap;
-            }
-                img.img{
-                    flex-grow: 0;
-                    height: 54px;
-                    margin: 25px 0 25px 25px
-                }
-            .social{
-                align-self: flex-end;
-                margin-left: 150px;
-                margin-bottom: 50px;
-            }
-            .fab {
-                color: #fff;
-                font-size: 2em;
-                margin: 5px;
-            }
+.first-half {
+    background: url(../img/bg-left.jpg) no-repeat fixed center;
+    background-size: cover;
+    background-position: -20em;
+    flex: 1 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    color: #fff;
+}
 
+.title {
+    align-self: center;
+}
 
-    .second-half {
-        flex: 3 1 auto;
-        padding: 7em 7em;
-        width: 40%;
-    }
-        .form{
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-        }
-            .box2 {
-                display: flex;
-                flex-flow: row wrap;
-            }
-                .sub-box1{
-                    display: flex;
-                    flex-flow: column nowrap;
-                    flex-grow: 1;
-                    flex-basis: 0;
-                    width: 100%;
-                }
+h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    padding: 3em;
+}
 
-            .box3 {
-                display: flex;
-                flex-flow: column nowrap;
-            }
+.text-midle h2 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+}
 
-            .box6 {
-                display: flex;
-                flex-flow: column nowrap;
-            }
-                .sub-box2{
-                    display: flex;
-                    flex-flow: column nowrap;
-                }
-                .file-r{
+h2 span {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-left: 5em;
+}
 
-                   position: relative;
-                }
+.logos {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.gob {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+img.img {
+    flex-grow: 0;
+    height: 54px;
+    margin: 25px 0 25px 25px
+}
+
+.social {
+    align-self: flex-end;
+    margin-left: 150px;
+    margin-bottom: 50px;
+}
+
+.fab {
+    color: #fff;
+    font-size: 2em;
+    margin: 5px;
+}
+
+.second-half {
+    flex: 3 1 auto;
+    padding: 7em 7em;
+    width: 40%;
+}
+
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.box2 {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sub-box1 {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    flex-basis: 0;
+    width: 100%;
+}
+
+.box3 {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.box6 {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.sub-box2 {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.file-r {
+    position: relative;
+}
+
 
 /*FIN ESTILOS FLEXBOX*/
 
@@ -126,13 +140,14 @@ body{
     position: relative;
     cursor: pointer;
 }
+
 .sel::before {
     position: absolute;
     content: '\f078';
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 1.5em;
-    color: #a5a5a5; 
+    color: #a5a5a5;
     right: 20px;
     top: calc(50% - 0.5em);
 }
@@ -152,10 +167,11 @@ body{
     visibility: visible;
 }
 
-.sel.active .sel__placeholder{
+.sel.active .sel__placeholder {
     visibility: hidden;
 }
-.sel__placeholder::before{
+
+.sel__placeholder::before {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -165,11 +181,11 @@ body{
     visibility: hidden;
 }
 
-.sel.active .sel__placeholder::before{
+.sel.active .sel__placeholder::before {
     visibility: visible;
 }
 
-.sel__box{
+.sel__box {
     position: absolute;
     top: calc(100% + 4px);
     left: -4px;
@@ -177,10 +193,11 @@ body{
     list-style-type: none;
     text-align: left;
     font-size: 15px;
-    background-color:#f4f5f7;
+    background-color: #f4f5f7;
     width: calc(100% + 8px);
     box-sizing: border-box;
 }
+
 .sel.active .sel__box {
     display: block;
     animation: fadeInUp 500ms;
@@ -194,7 +211,7 @@ body{
     user-select: none;
 }
 
-.sel__box__option::after{
+.sel__box__option::after {
     content: '\f00c';
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -209,6 +226,7 @@ body{
 
 .sel__box__option:hover {
     background-color: rgba(207, 0, 90, .3);
+    color: #fff;
 }
 
 .sel {
@@ -220,11 +238,11 @@ body{
     margin: 10px;
 }
 
-.select1{
+.select1 {
     z-index: 3;
 }
 
-.select2{
+.select2 {
     z-index: 2;
 }
 
@@ -237,7 +255,6 @@ body{
         opacity: 0;
         transform: translate3d(0, 20px, 0);
     }
-
     to {
         opacity: 1;
         transform: none;
@@ -248,18 +265,20 @@ body{
     from {
         opacity: 1;
     }
-
     to {
         opacity: 0;
     }
 }
+
 
 /*Fin selects */
 
 
 /*INPUT estilos*/
 
-.input[type=text], .input[type=email], .input[type=tel] {
+.input[type=text],
+.input[type=email],
+.input[type=tel] {
     border: none;
     border-bottom: 1px solid #a5a5a5;
     outline: none;
@@ -268,24 +287,24 @@ body{
     background-color: transparent;
 }
 
-.input[type=submit]{
+.input[type=submit] {
     border: none;
     width: 45%;
     color: #fff;
     background: #5f096c;
     background: -moz-linear-gradient(left, #5f096c 0%, #cf005a 100%);
-    background: -webkit-linear-gradient(left, #5f096c 0%,#cf005a 100%);
-    background: linear-gradient(to right, #5f096c 0%,#cf005a 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f096c', endColorstr='#cf005a',GradientType=1 );
+    background: -webkit-linear-gradient(left, #5f096c 0%, #cf005a 100%);
+    background: linear-gradient(to right, #5f096c 0%, #cf005a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#5f096c', endColorstr='#cf005a', GradientType=1);
     cursor: pointer;
     border-radius: 200px 200px 200px 200px;
     -moz-border-radius: 200px 200px 200px 200px;
     -webkit-border-radius: 200px 200px 200px 200px;
     padding: 10px;
-    margin-top:20px; 
+    margin-top: 20px;
 }
 
-.input[type=file]{
+.input[type=file] {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
@@ -294,7 +313,7 @@ body{
     z-index: -1;
 }
 
-.file-c + .file-r {
+.file-c+.file-r {
     font-size: 0.9em;
     color: #fff;
     background-color: #cf005a;
@@ -313,7 +332,8 @@ body{
     text-transform: uppercase;
 }
 
-.label, .input{
+.label,
+.input {
     margin: 10px;
     padding: 5px;
     font-family: 'Poppins', sans-serif;
@@ -321,33 +341,34 @@ body{
 
 
 /**Media querys*/
-@media all and (max-width: 300px){
+
+@media all and (max-width: 300px) {
     h1 {
         font-size: 1.5em;
     }
 }
 
-@media all and (max-width:400px){
-    .logos{
+@media all and (max-width:400px) {
+    .logos {
         display: none;
     }
- 
 }
 
-@media all and (max-width: 600px){
-    div.second-half{
+@media all and (max-width: 600px) {
+    div.second-half {
         width: 95%;
     }
     .sel__placeholder {
         display: block;
         font-size: 12px;
     }
-    .input[type=text], .input[type=email] {
+    .input[type=text],
+    .input[type=email] {
         font-size: 12px;
     }
 }
 
-@media all and (max-width: 1000px){
+@media all and (max-width: 1000px) {
     .container {
         flex-flow: column nowrap;
     }
@@ -364,17 +385,15 @@ body{
     h2 span {
         display: none;
     }
-    .title{
+    .title {
         flex: 2 1 auto;
         align-self: center;
         margin: 0px;
     }
-
     .logos {
         flex: 1 1 100%;
         align-items: flex-end;
         align-content: space-between;
-
     }
     .gob {
         flex: 1 1 auto;
@@ -391,10 +410,84 @@ body{
         height: 30px;
         margin-bottom: 0;
     }
-        .sel::before {
+    .sel::before {
         right: 0px;
     }
-    
 }
+
+@media all and (min-height: 968px) {
+    .container {
+        flex-flow: column nowrap;
+    }
+    .second-half {
+        padding: 2em 2em;
+        width: 50%;
+        align-self: center;
+    }
+    .first-half {
+        flex-flow: column nowrap;
+        background-position: center;
+        height: 20em;
+    }
+    h2 span {
+        display: none;
+    }
+    .title {
+        flex: 2 1 auto;
+        align-self: center;
+        margin: 0px;
+    }
+    .logos {
+        flex: 1 1 100%;
+        align-items: flex-end;
+        align-content: space-between;
+    }
+    .gob {
+        flex: 1 1 auto;
+        margin: 10px;
+        align-self: auto;
+    }
+    .social {
+        flex: 1 1 auto;
+        margin: 10px;
+        align-self: auto;
+        text-align: right;
+    }
+    img.img {
+        height: 30px;
+        margin-bottom: 0;
+    }
+    .sel::before {
+        right: 0px;
+    }
+}
+
+@media all and (min-height: 1280px) {
+    h1 {
+        font-size: 3em;
+        padding: 2em;
+    }
+    .label {
+        font-size: 1.5em;
+    }
+    .sel__placeholder {
+        font-size: 2em;
+    }
+    .sel__box__option {
+        font-size: 1.5em;
+    }
+    .input[type=text],
+    .input[type=email],
+    .input[type=tel] {
+        font-size: 2em;
+    }
+    .file-c+.file-r {
+        font-size: 1.2em;
+    }
+    .input[type=submit] {
+        font-size: 1.9em;
+    }
+}
+
 
 /**Media querys*/

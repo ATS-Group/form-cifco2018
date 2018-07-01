@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
@@ -10,111 +11,119 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Consuma 2018 - Registro</title>
 </head>
-<body>
-        <div class="container"> 
-                <div class="first-half">
-                  <div class="title">
-                    <h1>Registro Consuma 2018</h1>
-                  </div>
-                  <div class="text-midle">
-                   <h2><span>Diversión</span><span>Entretenimiento</span><span>Comercio</span></h2>
-                  </div>
-                  <div class="logos">
-                    <div class="gob">
-                      <a href="http://www.cifco.gob.sv/"><img class="img" src="img/cifco.png" alt="logo-cifco"></a>
-                      <a href="http://www.presidencia.gob.sv/"><img class="img" src="img/gobiernosv.png" alt="logo-gobierno-el-salvador"></a>
-                    </div>
-                    <div class="social">
-                      <a href="https://www.facebook.com/CIFCOSV/"><i class="fab fa-facebook-f"></i></a>
-                      <a href="https://twitter.com/CIFCOSV"><i class="fab fa-twitter"></i></a>
-                      <a href="https://www.youtube.com/channel/UCUbq10wOZhP0Wg4qbox21Lw"><i class="fab fa-youtube"></i></a>
-                      <a href="https://www.instagram.com/cifcoelsalvador/"><i class="fab fa-instagram"></i></a>
-                    </div>
-                  </div><!--.logos-->
 
-                </div><!--.firsthalf-->
-                <div class="second-half">
-                  <form action="" method="post" class="form">
-          
-                    <div class="box2">
+<body>
+    <div class="container">
+        <div class="first-half">
+            <div class="title">
+                <h1>Registro Consuma 2018</h1>
+            </div>
+            <div class="text-midle">
+                <h2><span>Diversión</span><span>Entretenimiento</span><span>Comercio</span></h2>
+            </div>
+            <div class="logos">
+                <div class="gob">
+                    <a href="http://www.cifco.gob.sv/"><img class="img" src="img/cifco.png" alt="logo-cifco"></a>
+                    <a href="http://www.presidencia.gob.sv/"><img class="img" src="img/gobiernosv.png" alt="logo-gobierno-el-salvador"></a>
+                </div>
+                <div class="social">
+                    <a href="https://www.facebook.com/CIFCOSV/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/CIFCOSV"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCUbq10wOZhP0Wg4qbox21Lw"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/cifcoelsalvador/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <!--.logos-->
+
+        </div>
+        <!--.firsthalf-->
+        <div class="second-half">
+            <form action="" method="post" class="form">
+
+                <div class="box2">
                     <div class="sub-box1">
-                        <label for="nombre" class="label">Nombre</label>
+                        <label for="nombre" class="label" id="nombre">Nombre</label>
                         <input type="text" name="nombre" class="input">
                     </div>
                     <div class="sub-box1">
                         <label for="apellido" class="label">Apellido</label>
-                        <input type="text" name="apellido"class="input">
+                        <input type="text" name="apellido" class="input" id="apellido">
                     </div>
 
-                    </div><!--.box2-->
-                    
-                    <div class="box2">
-                      <div class="sub-box1">
+                </div>
+                <!--.box2-->
+
+                <div class="box2">
+                    <div class="sub-box1">
                         <label for="celular" class="label">Celular</label>
-                        <input type="tel" name="celular" class="input">
-                      </div>
-                      <div class="sub-box1">
+                        <input type="tel" name="celular" class="input" id="celular">
+                    </div>
+                    <div class="sub-box1">
                         <label for="pais" class="label">País</label>
                         <div class="sel select1 pais" id="pais">
-                          <select name="pais" class="select pais" id="select">
+                            <select name="pais" class="select pais" id="pais">
                               <option value="default" class="opcion" disabled>Seleccionar</option>
                               <option value="el-salvador" class="opcion">El Salvador</option>
                               <option value="guatemala" class="opcion">Guatemala</option>
                               <option value="nicaragua" class="opcion">Nicaragua</option>
                           </select>
                         </div>
-                      </div>
+                    </div>
 
-                    </div><!--box2-->
+                </div>
+                <!--box2-->
 
-                    <div class="box3">
-                      <div class="sub-box2">
+                <div class="box3">
+                    <div class="sub-box2">
                         <label for="empresa" class="label">Empresa</label>
-                        <input type="text" name="empresa" class="input">
-                      </div>
-                      <div class="sub-box2">
+                        <input type="text" name="empresa" class="input" id="empresa">
+                    </div>
+                    <div class="sub-box2">
                         <label for="correo" class="label">Correo electrónico</label>
-                        <input type="email" name="email" class="input">
-                      </div>
-                    </div><!--box3-->
+                        <input type="email" name="email" class="input" id="correo">
+                    </div>
+                </div>
+                <!--box3-->
 
-                    <div class="box2">
-                      <div class="sub-box1">
-                          <label for="documento" class="label">Documento</label>
-                          <div class="sel select1">
-                            <select class="select" name="Documento" id="select">
+                <div class="box2">
+                    <div class="sub-box1">
+                        <label for="documento" class="label">Documento</label>
+                        <div class="sel select1">
+                            <select class="select" name="Documento" id="documento">
                               <option value="default" class="opcion" disabled>Seleccionar</option>
                               <option value="dui" class="opcion">DUI</option>
                               <option value="nit" class="opcion">NIT</option>
                               <option value="pasaporte" class="opcion">Pasaporte</option>
                               <option value="licencia" class="opcion">Licencia</option>
-                            </select>            
-                          </div>
-                      </div>
-                      <div class="sub-box1">
-                          <label for="numero-documento" class="label">Número de Documento</label>
-                          <input type="text" name="numero-documento" class="input">
-                      </div>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="sub-box1">
+                        <label for="numero-documento" class="label">Número de Documento</label>
+                        <input type="text" name="numero-documento" class="input" id="numeroDocumento">
+                    </div>
 
-                    </div><!--box2-->
-          
-                    <div class="box2">
-                      <div class="sub-box1">
-                        <label for="categoria" class="label">Categoria</label>
+                </div>
+                <!--box2-->
+
+                <div class="box2">
+                    <div class="sub-box1">
+                        <label for="categoria" class="label">Categoría</label>
                         <div class="sel select2">
-                          <select name="categoria" id="" class="select">
+                            <select name="categoria" class="select" id="categoria">
                               <option value="default" class="opcion" disabled>Seleccionar</option>
                             <option value="staff" class="opcion">Expositor</option>
                             <option value="proveedor" class="opcion">Proveedor</option>
                             <option value="staff" class="opcion">Staff</option>
                           </select>
                         </div>
-                      </div> <!--box2-->
+                    </div>
+                    <!--box2-->
 
-                      <div class="sub-box1">
+                    <div class="sub-box1">
                         <label for="tipo-acceso" class="label">Tipo de acceso</label>
                         <div class="sel select3">
-                          <select name="tipo-acceso" id="" class="select">
+                            <select name="tipo-acceso" class="select" id="tipo-acceso">
                               <option value="default" class="opcion" disabled>Seleccionar</option>
                             <option value="total" class="opcion">Total</option>
                             <option value="administrativo" class="opcion">Administrativo</option>
@@ -122,30 +131,34 @@
                             <option value="apoyo" class="opcion">Apoyo</option>
                           </select>
                         </div>
-                      </div>
-                    </div><!--.box5-->
-          
-                    <div class="box6">
-                      <div class="sub-box2"></div>
-                        <label for="foto" class="label">Subir foto</label>
-                        <input type="file" name="subir-foto" class="input file-c" id="file"/>
-                        <label for="file" class="label file-r"><span>Selecciona un archivo</span></label>
-                      </div>
-                      <div class="sub-box2">
-                        <input type="submit" value="ENVIAR"class="input">
-                        
-                      </div>
-                    </div><!--box6-->
+                    </div>
+                </div>
+                <!--.box5-->
+
+                <div class="box6">
+                    <div class="sub-box2"></div>
+                    <label for="foto" class="label">Subir foto</label>
+                    <input type="file" name="subir-foto" accept="image/*" class="input file-c" id="file" />
+                    <label for="file" class="label file-r"><span>Selecciona un archivo</span></label>
+                </div>
+                <div class="sub-box2">
+                    <input type="submit" value="ENVIAR" class="input">
+
+                </div>
+        </div>
+        <!--box6-->
 
 
-          
-                  </form>
-                </div><!--secondhalf-->
-          
-            </div> <!--.container-->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+        </form>
+    </div>
+    <!--secondhalf-->
+
+    </div>
+    <!--.container-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
