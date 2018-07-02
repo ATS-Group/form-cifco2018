@@ -101,13 +101,12 @@
                     <div class="sub-box1">
                         <label for="documento" class="label">Documento</label>
                         <span class="error_form" id="fdocument_error_message"></span>
-                        <div class="sel select1">
-                            <select class="select" name="Documento" id="form_fdocument">
-                              <option value="" class="opcion" disabled>Seleccionar</option>
+                        <div class="sel select1 documento">
+                            <select class="select document" name="Documento" id="form_fdocument">
+                              <option value="" class="opcion">Seleccionar</option>
                               <option value="1" class="opcion">DUI</option>
-                              <option value="2" class="opcion">NIT</option>
-                              <option value="3" class="opcion">Pasaporte</option>
-                              <option value="4" class="opcion">Licencia</option>
+                              <option value="2" class="opcion">Pasaporte</option>
+                              <option value="3" class="opcion">NIT/Licencia</option>
                             </select>
                         </div>
                     </div>
@@ -120,7 +119,7 @@
                 </div>
                 <!--box2-->
 
-                <div class="box2">
+                <div class="box2" id="admin">
                     <div class="sub-box1">
                         <label for="categoria" class="label">Categoría</label>
                         <span class="error_form" id="fcategory_error_message"></span>
@@ -176,6 +175,7 @@
     <!--.container-->
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js" integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 

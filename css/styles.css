@@ -87,6 +87,7 @@ img.img {
 .second-half {
     flex: 3 1 auto;
     padding: 7em 7em;
+    padding-bottom: 10em;
     width: 40%;
 }
 
@@ -148,7 +149,7 @@ img.img {
     font-weight: 900;
     font-size: 1.5em;
     color: #a5a5a5;
-    right: 20px;
+    right: 0px;
     top: calc(50% - 0.5em);
 }
 
@@ -484,10 +485,14 @@ img.img {
         height: 30px;
         margin-bottom: 0;
     }
-    .sel::before {
-        right: 0px;
-    }
 }
 
 
-/**Media querys*/
+/**Fin Media querys*/
+
+
+/*Clases auxiliares JS*/
+
+.hideThis {
+    display: none;
+}
