@@ -368,53 +368,6 @@ img.img {
     }
 }
 
-@media all and (max-width: 1000px) {
-    .container {
-        flex-flow: column nowrap;
-    }
-    .second-half {
-        padding: 2em 2em;
-        width: 60%;
-        align-self: center;
-    }
-    .first-half {
-        flex-flow: column nowrap;
-        background-position: center;
-        height: 20em;
-    }
-    h2 span {
-        display: none;
-    }
-    .title {
-        flex: 2 1 auto;
-        align-self: center;
-        margin: 0px;
-    }
-    .logos {
-        flex: 1 1 100%;
-        align-items: flex-end;
-        align-content: space-between;
-    }
-    .gob {
-        flex: 1 1 auto;
-        margin: 10px;
-        align-self: auto;
-    }
-    .social {
-        flex: 1 1 auto;
-        margin: 10px;
-        align-self: auto;
-        text-align: right;
-    }
-    img.img {
-        height: 30px;
-        margin-bottom: 0;
-    }
-    .sel::before {
-        right: 0px;
-    }
-}
-
 @media all and (min-height: 968px) {
     .container {
         flex-flow: column nowrap;
@@ -486,6 +439,53 @@ img.img {
     }
     .input[type=submit] {
         font-size: 1.9em;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .container {
+        flex-flow: column nowrap;
+    }
+    .second-half {
+        padding: 2em 2em;
+        width: 60%;
+        align-self: center;
+    }
+    .first-half {
+        flex-flow: column nowrap;
+        background-position: center;
+        height: 20em;
+    }
+    h2 span {
+        display: none;
+    }
+    .title {
+        flex: 2 1 auto;
+        align-self: center;
+        margin: 0px;
+    }
+    .logos {
+        flex: 1 1 100%;
+        align-items: flex-end;
+        align-content: space-between;
+    }
+    .gob {
+        flex: 1 1 auto;
+        margin: 10px;
+        align-self: auto;
+    }
+    .social {
+        flex: 1 1 auto;
+        margin: 10px;
+        align-self: auto;
+        text-align: right;
+    }
+    img.img {
+        height: 30px;
+        margin-bottom: 0;
+    }
+    .sel::before {
+        right: 0px;
     }
 }
 

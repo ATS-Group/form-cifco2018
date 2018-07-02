@@ -42,12 +42,14 @@
 
                 <div class="box2">
                     <div class="sub-box1">
-                        <label for="nombre" class="label" id="nombre">Nombre</label>
-                        <input type="text" name="nombre" class="input">
+                        <label for="nombre" class="label">Nombres</label>
+                        <span class="error_form" id="fname_error_message"></span>
+                        <input type="text" name="nombre" class="input" id="form_fname">
                     </div>
                     <div class="sub-box1">
-                        <label for="apellido" class="label">Apellido</label>
-                        <input type="text" name="apellido" class="input" id="apellido">
+                        <label for="apellido" class="label">Apellidos</label>
+                        <span class="error_form" id="flname_error_message"></span>
+                        <input type="text" name="apellido" class="input" id="form_flname">
                     </div>
 
                 </div>
@@ -55,20 +57,28 @@
 
                 <div class="box2">
                     <div class="sub-box1">
-                        <label for="celular" class="label">Celular</label>
-                        <input type="tel" name="celular" class="input" id="celular">
-                    </div>
-                    <div class="sub-box1">
                         <label for="pais" class="label">País</label>
+                        <span class="error_form" id="fcountry_error_message"></span>
                         <div class="sel select1 pais" id="pais">
-                            <select name="pais" class="select pais" id="pais">
-                              <option value="default" class="opcion" disabled>Seleccionar</option>
-                              <option value="el-salvador" class="opcion">El Salvador</option>
-                              <option value="guatemala" class="opcion">Guatemala</option>
-                              <option value="nicaragua" class="opcion">Nicaragua</option>
-                          </select>
+                            <select name="pais" class="select pais" id="form_fcountry">
+                                <option value="" class="opcion">Seleccionar</option>
+                                <option value="1" class="opcion">El Salvador</option>
+                                <option value="2" class="opcion">Guatemala</option>
+                                <option value="3" class="opcion">Nicaragua</option>
+                                <option value="4" class="opcion">Honduras</option>
+                                <option value="5" class="opcion">Costa Rica</option>
+                                <option value="6" class="opcion">Panama</option>
+                            </select>
                         </div>
                     </div>
+
+                    <div class="sub-box1">
+                        <label for="celular" class="label">Celular</label>
+                        <span class="error_form" id="ftel_error_message"></span>
+                        <input type="tel" name="celular" class="input" id="form_ftel">
+                    </div>
+
+
 
                 </div>
                 <!--box2-->
@@ -76,11 +86,13 @@
                 <div class="box3">
                     <div class="sub-box2">
                         <label for="empresa" class="label">Empresa</label>
-                        <input type="text" name="empresa" class="input" id="empresa">
+                        <span class="error_form" id="fcompany_error_message"></span>
+                        <input type="text" name="empresa" class="input" id="form_fcompany">
                     </div>
                     <div class="sub-box2">
                         <label for="correo" class="label">Correo electrónico</label>
-                        <input type="email" name="email" class="input" id="correo">
+                        <span class="error_form" id="femail_error_message"></span>
+                        <input type="email" name="email" class="input" id="form_femail">
                     </div>
                 </div>
                 <!--box3-->
@@ -88,19 +100,21 @@
                 <div class="box2">
                     <div class="sub-box1">
                         <label for="documento" class="label">Documento</label>
+                        <span class="error_form" id="fdocument_error_message"></span>
                         <div class="sel select1">
-                            <select class="select" name="Documento" id="documento">
-                              <option value="default" class="opcion" disabled>Seleccionar</option>
-                              <option value="dui" class="opcion">DUI</option>
-                              <option value="nit" class="opcion">NIT</option>
-                              <option value="pasaporte" class="opcion">Pasaporte</option>
-                              <option value="licencia" class="opcion">Licencia</option>
+                            <select class="select" name="Documento" id="form_fdocument">
+                              <option value="" class="opcion" disabled>Seleccionar</option>
+                              <option value="1" class="opcion">DUI</option>
+                              <option value="2" class="opcion">NIT</option>
+                              <option value="3" class="opcion">Pasaporte</option>
+                              <option value="4" class="opcion">Licencia</option>
                             </select>
                         </div>
                     </div>
                     <div class="sub-box1">
                         <label for="numero-documento" class="label">Número de Documento</label>
-                        <input type="text" name="numero-documento" class="input" id="numeroDocumento">
+                        <span class="error_form" id="fndocument_error_message"></span>
+                        <input type="text" name="numero-documento" class="input" id="form_fndocument">
                     </div>
 
                 </div>
@@ -109,12 +123,13 @@
                 <div class="box2">
                     <div class="sub-box1">
                         <label for="categoria" class="label">Categoría</label>
+                        <span class="error_form" id="fcategory_error_message"></span>
                         <div class="sel select2">
-                            <select name="categoria" class="select" id="categoria">
-                              <option value="default" class="opcion" disabled>Seleccionar</option>
-                            <option value="staff" class="opcion">Expositor</option>
-                            <option value="proveedor" class="opcion">Proveedor</option>
-                            <option value="staff" class="opcion">Staff</option>
+                            <select name="categoria" class="select" id="form_fcategory">
+                              <option value="" class="opcion" disabled>Seleccionar</option>
+                            <option value="1" class="opcion">Expositor</option>
+                            <option value="2" class="opcion">Proveedor</option>
+                            <option value="3" class="opcion">Staff</option>
                           </select>
                         </div>
                     </div>
@@ -122,13 +137,14 @@
 
                     <div class="sub-box1">
                         <label for="tipo-acceso" class="label">Tipo de acceso</label>
+                        <span class="error_form" id="facces_error_message"></span>
                         <div class="sel select3">
-                            <select name="tipo-acceso" class="select" id="tipo-acceso">
-                              <option value="default" class="opcion" disabled>Seleccionar</option>
-                            <option value="total" class="opcion">Total</option>
-                            <option value="administrativo" class="opcion">Administrativo</option>
-                            <option value="operativo" class="opcion">Operativo</option>
-                            <option value="apoyo" class="opcion">Apoyo</option>
+                            <select name="tipo-acceso" class="select" id="form_facces">
+                              <option value="" class="opcion" disabled>Seleccionar</option>
+                            <option value="1" class="opcion">Total</option>
+                            <option value="2" class="opcion">Administrativo</option>
+                            <option value="3" class="opcion">Operativo</option>
+                            <option value="4" class="opcion">Apoyo</option>
                           </select>
                         </div>
                     </div>
@@ -138,8 +154,10 @@
                 <div class="box6">
                     <div class="sub-box2"></div>
                     <label for="foto" class="label">Subir foto</label>
-                    <input type="file" name="subir-foto" accept="image/*" class="input file-c" id="file" />
+                    <input type="file" name="subir-foto" accept="image/*" class="input file-c form_fphoto" id="file" />
                     <label for="file" class="label file-r"><span>Selecciona un archivo</span></label>
+                    <span class="error_form" id="fphoto_error_message"></span>
+
                 </div>
                 <div class="sub-box2">
                     <input type="submit" value="ENVIAR" class="input">
