@@ -343,7 +343,7 @@ $(function() {
         }
     }
 
-    $('#form').bind("submit", function() {
+    $('#form').submit(function() {
         error_fname = false;
         error_flname = false;
         error_ftel = false;
@@ -365,14 +365,11 @@ $(function() {
         check_fphoto();
 
         if (error_fname == false && error_flname == false && error_ftel == false && error_fcountry == false && error_fcompany == false && error_fmail == false && error_fdocument == false && error_fndocument == false && error_fphoto == false) {
-            alert('Todo cool');
             return true;
         } else {
-            alert('Aun falta');
             return false;
         }
     });
-
 
 
 
