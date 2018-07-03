@@ -38,7 +38,8 @@
         </div>
         <!--.firsthalf-->
         <div class="second-half">
-            <form method="post" class="form" id="form">
+
+            <form action="destino.php" method="POST" class="form" id="form">
 
                 <div class="box2">
                     <div class="sub-box1">
@@ -102,7 +103,7 @@
                         <label for="documento" class="label">Documento</label>
                         <span class="error_form" id="fdocument_error_message"></span>
                         <div class="sel select1 documento">
-                            <select class="select document" name="Documento" id="form_fdocument">
+                            <select class="select document" name="documento" id="form_fdocument">
                               <option value="" class="opcion">Seleccionar</option>
                               <option value="1" class="opcion">DUI</option>
                               <option value="2" class="opcion">Pasaporte</option>
@@ -150,17 +151,9 @@
                 </div>
                 <!--.box5-->
 
-                <div class="box6">
-                    <div class="sub-box2"></div>
-                    <label for="foto" class="label">Subir foto</label>
-                    <span class="error_form" id="fphoto_error_message"></span>
-                    <input type="file" name="subir-foto" accept="image/*" class="input file-c form_fphoto" id="file" />
-                    <label for="file" class="label file-r"><span>Selecciona un archivo</span></label>
-
-                </div>
-                <div class="sub-box2">
+                <div class="sub-box3">
                     <input type="submit" value="ENVIAR" class="input">
-
+                    <div class="nb-spinner hideThis"></div>
                 </div>
         </div>
         <!--box6-->
@@ -168,15 +161,17 @@
 
 
         </form>
-        <span class="mensaje" id="mensaje">Gracias por registrarte. Se te ha enviado un correo electrónico para confirmar tus datos.</span>
+        <span class="mensaje hideThis" id="mensaje">Gracias por registrarte. Se te ha enviado un correo electrónico para confirmar tus datos.</span>
+
     </div>
     <!--secondhalf-->
 
+
     </div>
     <!--.container-->
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js" integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

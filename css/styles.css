@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    font-wfont-weight: 300;
+    font-weight: 300;
     font-size: 12px;
     background-color: #fbfbfc;
 }
@@ -86,7 +86,7 @@ img.img {
 
 .second-half {
     flex: 3 1 auto;
-    padding: 7em 7em;
+    padding: 15em 6em;
     padding-bottom: 10em;
     width: 40%;
 }
@@ -115,14 +115,14 @@ img.img {
     flex-flow: column nowrap;
 }
 
-.box6 {
+.sub-box2 {
     display: flex;
     flex-flow: column nowrap;
 }
 
-.sub-box2 {
+.sub-box3 {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
 }
 
 .file-r {
@@ -302,29 +302,7 @@ img.img {
     -moz-border-radius: 200px 200px 200px 200px;
     -webkit-border-radius: 200px 200px 200px 200px;
     padding: 10px;
-    margin-top: 20px;
-}
-
-.input[type=file] {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-
-.file-c+.file-r {
-    font-size: 0.9em;
-    color: #fff;
-    background-color: #cf005a;
-    border-radius: 200px 200px 200px 200px;
-    -moz-border-radius: 200px 200px 200px 200px;
-    -webkit-border-radius: 200px 200px 200px 200px;
-    width: 40%;
-    text-align: center;
-    cursor: pointer;
-    margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 .label {
@@ -338,6 +316,31 @@ img.img {
     margin: 10px;
     padding: 5px;
     font-family: 'Poppins', sans-serif;
+}
+
+.nb-spinner {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 10px;
+    background: transparent;
+    border-top: 4px solid #a5a5a5;
+    border-right: 4px solid transparent;
+    border-radius: 50%;
+    -webkit-animation: 1s spin linear infinite;
+    animation: 1s spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -364,7 +367,8 @@ img.img {
         font-size: 12px;
     }
     .input[type=text],
-    .input[type=email] {
+    .input[type=email],
+    .input[type=tel] {
         font-size: 12px;
     }
 }
@@ -495,4 +499,17 @@ img.img {
 
 .hideThis {
     display: none;
+}
+
+span.mensaje {
+    width: 100%;
+    height: 100%;
+    padding: 25em 2em;
+    font-size: 1.5em;
+}
+
+@media all and (max-width: 1000px) {
+    span.mensaje {
+        padding: 5em 2em;
+    }
 }

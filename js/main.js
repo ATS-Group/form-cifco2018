@@ -1,33 +1,5 @@
 /***Javascript puro */
 
-(function() {
-    "use strict";
-
-    document.addEventListener('DOMContentLoaded', function(event) {
-
-        /** Hacks para que el input file funcione */
-
-        var inputs = document.querySelectorAll('.file-c');
-        Array.prototype.forEach.call(inputs, function(input) {
-            var label = input.nextElementSibling,
-                labelVal = label.innerHTML;
-
-            input.addEventListener('change', function(e) {
-                var fileName = '';
-
-                fileName = e.target.value.split('\\').pop();
-
-                if (fileName) {
-                    label.querySelector('span').innerHTML = fileName;
-                } else {
-                    label.innerHTML = labelVal;
-                }
-            });
-        });
-    });
-
-})(); //Dom content loaded
-
 /**Jquery */
 
 /**Que los estilos del select funcionen */
@@ -124,7 +96,7 @@ $(function() {
     //Ocultar tipo de acceso
     $('#admin').hide();
 
-    $('#mensaje').hide();
+
 
 
 
@@ -193,7 +165,7 @@ $(function() {
             $('#form_fname').css('border-bottom', '2px solid #2AAF74');
             $('#form_flname').css("margin-top", "auto");
         } else {
-            $('#fname_error_message').html("Requerido.Pon ambos nombres");
+            $('#fname_error_message').html("Requerido. Escribe ambos nombres");
             $("#fname_error_message").show();
             $('#form_fname').css("border-bottom", "2px solid #dd3333");
             $('#form_flname').css("margin-top", "28px");
@@ -209,7 +181,7 @@ $(function() {
             $('#form_flname').css('border-bottom', '2px solid #2AAF74');
             $('#form_fname').css("margin-top", "auto");
         } else {
-            $('#flname_error_message').html("Requerido. Pon ambos apellidos");
+            $('#flname_error_message').html("Requerido. Escribe ambos apellidos");
             $("#flname_error_message").show();
             $('#form_flname').css("border-bottom", "2px solid #dd3333");
             $('#form_fname').css("margin-top", "28px");
@@ -343,7 +315,8 @@ $(function() {
         }
     }
 
-    $('#form').submit(function() {
+    $('#form').submit(function(ev) {
+        $('.nb-spinner').removeClass('hideThis');
         error_fname = false;
         error_flname = false;
         error_ftel = false;
@@ -365,13 +338,23 @@ $(function() {
         check_fphoto();
 
         if (error_fname == false && error_flname == false && error_ftel == false && error_fcountry == false && error_fcompany == false && error_fmail == false && error_fdocument == false && error_fndocument == false && error_fphoto == false) {
-            return true;
+            $.ajax({
+                type: $('#form').attr('method'),
+                url: $('#form').attr('action'),
+                data: $('#form').serialize(),
+                success: function(data) {
+                    $('.second-half').addClass('hideThis');
+                    $('#mensaje').removeClass('hideThis');
+                }
+            });
+            ev.preventDefault();
         } else {
+            $('.nb-spinner').hide();
+            $('.nb-spinner').addClass('hideThis');
             return false;
         }
     });
 
 
-
-
+    //Envio de datos por AJAX
 });
