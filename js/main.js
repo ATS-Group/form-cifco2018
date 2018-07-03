@@ -116,6 +116,16 @@ $(function() {
         }
     });
 
+    /**Correcciones css */
+    if ($('.select.pais option:selected').val() == 5) {
+        $('span.sel__placeholder.sel__placeholderect1.pais').css("padding-right", "40px");
+    }
+
+    //Ocultar tipo de acceso
+    $('#admin').hide();
+
+    $('#mensaje').hide();
+
 
 
 
@@ -316,10 +326,9 @@ $(function() {
     }
 
     function check_fphoto() {
-        var fphoto = $('.form_fphoto');
-        var archivo = fphoto.length;
+        var fphoto = $('.form_fphoto').val();
 
-        if (archivo > 0) {
+        if (fphoto !== "") {
             $("#fphoto_error_message").hide();
             $('.file-r').animate({
                 backgroundColor: '#5f096c'
@@ -328,18 +337,44 @@ $(function() {
             $('#fphoto_error_message').html("Requerido. Debe subir una foto. 2MB Máx.");
             $("#fphoto_error_message").show();
             $('.file-r').animate({
-                background: '#dd3333'
+                backgroundColor: '#dd3333'
             }, 1500);
             error_fphoto = true;
         }
     }
 
+    $('#form').bind("submit", function() {
+        error_fname = false;
+        error_flname = false;
+        error_ftel = false;
+        error_fcountry = false;
+        error_fcompany = false;
+        error_fmail = false;
+        error_fdocument = false;
+        error_fndocument = false;
+        error_fphoto = false;
 
-    /**Correcciones css */
-    if ($('.select.pais option:selected').val() == 5) {
-        $('span.sel__placeholder.sel__placeholderect1.pais').css("padding-right", "40px");
-    }
+        check_fname();
+        check_flname();
+        check_ftel();
+        check_fcountry();
+        check_fcompany();
+        check_femail();
+        check_fdocument();
+        check_fndocument();
+        check_fphoto();
+
+        if (error_fname == false && error_flname == false && error_ftel == false && error_fcountry == false && error_fcompany == false && error_fmail == false && error_fdocument == false && error_fndocument == false && error_fphoto == false) {
+            alert('Todo cool');
+            return true;
+        } else {
+            alert('Aun falta');
+            return false;
+        }
+    });
 
 
-    $('#admin').hide();
+
+
+
 });

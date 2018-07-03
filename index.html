@@ -38,7 +38,7 @@
         </div>
         <!--.firsthalf-->
         <div class="second-half">
-            <form action="" method="post" class="form">
+            <form method="post" class="form" id="form">
 
                 <div class="box2">
                     <div class="sub-box1">
@@ -153,9 +153,9 @@
                 <div class="box6">
                     <div class="sub-box2"></div>
                     <label for="foto" class="label">Subir foto</label>
+                    <span class="error_form" id="fphoto_error_message"></span>
                     <input type="file" name="subir-foto" accept="image/*" class="input file-c form_fphoto" id="file" />
                     <label for="file" class="label file-r"><span>Selecciona un archivo</span></label>
-                    <span class="error_form" id="fphoto_error_message"></span>
 
                 </div>
                 <div class="sub-box2">
@@ -168,6 +168,7 @@
 
 
         </form>
+        <span class="mensaje" id="mensaje">Gracias por registrarte. Se te ha enviado un correo electrónico para confirmar tus datos.</span>
     </div>
     <!--secondhalf-->
 
